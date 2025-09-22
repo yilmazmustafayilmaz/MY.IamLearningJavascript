@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example</title>
+</head>
+<body>
+  <h1 id="title">Hello</h1>
+  <h1 class="item">Hello World Class</h1>
+  <ul id="list"></ul>
+  <button id="btn">Button</button>
+</body>
+</html>
+
+<script>
+// ID ile seç
+const title = document.getElementById("title");
+// Class ile seç
+const items = document.getElementsByClassName("item");
+// Query selector (çok esnek)
+const firstItem = document.querySelector(".item");
+const allItems = document.querySelectorAll(".item");
+console.log(title, firstItem, allItems);
+
+const el = document.getElementById("title");
+el.innerHTML = "Hello World New";
+el.innerHTML = "<b>Hello World New</b>";
+
+const el1 = document.getElementById("title");
+el1.style.color = "red";
+el1.style.fontSize = "24px";
+
+const list = document.getElementById("list");
+const li = document.createElement("li");
+li.innerText = "New Item";
+list.appendChild(li);
+
+const btn = document.getElementById("btn");
+btn.addEventListener("click", () =>{
+  alert("Button clicked!");
+})
+
+</script>
