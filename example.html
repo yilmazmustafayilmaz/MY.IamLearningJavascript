@@ -1,0 +1,32 @@
+<body>
+    <p id="counter">0</p>
+    <button id="inc">+</button>
+    <button id="dec">-</button>
+    <br><br>
+    <button id="inc2">+2</button>
+    <button id="dec2">-2</button>
+</body>
+
+<script>
+    let count = 0;
+    const render = () => (counter.textContent = count);
+    let counter = document.getElementById("counter");
+
+    let incBtn = document.getElementById("inc");
+    let decBtn = document.getElementById("dec");
+
+    incBtn.addEventListener('click', () => {
+        count++;
+        render();
+    });
+    decBtn.addEventListener("click", () => {
+        count--;
+        render();
+    });
+
+    let inc2Btn = document.getElementById("inc2");
+    let dec2Btn = document.getElementById("dec2");
+
+    inc2Btn.addEventListener('click', () => { count += 2; render(); });
+    dec2Btn.addEventListener('click', () => { count -= 2; render(); });
+</script>
